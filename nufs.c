@@ -322,7 +322,7 @@ nufs_rename(const char *from, const char *to)
     void* files = pages_get_page(new_path->ptr[0]); 
     for (int ii = 0; ii < DIRECTORY_MAX; ++ii) {
         dir_entry* dir = (dir_entry*) files + ii;
-        if (dir->node_num != 0) {
+        if (dir->node_num == 0) {
             strcpy(dir->name, file_name); //copy the new name to the directory
             dir->node_num = old_node_num;
             time_t t;
