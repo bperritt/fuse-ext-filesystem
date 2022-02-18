@@ -1,4 +1,6 @@
-# ext-filesystem
+# fuse-ext-filesystem
+-Implements the fuse interface, which builds the filesystem and manages it using the fuse daemon
+
 -1 Mb large filesystem, able to be mounted in whichever folder the makefile is run.
 
 -To use, you must install the fuse library or mounting will not work.
